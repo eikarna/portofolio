@@ -7,8 +7,6 @@
   <title>Portofolio - Adnan</title>
   <!-- Gunakan CDN Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Cookie.js untuk menyimpan state mode -->
-  <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
 </head>
 
 <body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-white transition-colors duration-300 ease-in-out">
@@ -49,15 +47,6 @@
     }
   </style>
 
-  <!-- Floating Action Button (FAB) -->
-  <button id="toggleMode"
-    class="fixed bottom-6 right-6 bg-blue-600 text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center hover:bg-blue-700 transition duration-300 ease-in-out z-50">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-    </svg>
-  </button>
-
   <!-- Header Section -->
   <header class="bg-blue-600 text-white py-6">
     <div class="container mx-auto px-4 flex justify-between items-center">
@@ -71,21 +60,26 @@
     </div>
   </header>
 
+  <div class="fixed -z-10 inset-0 h-screen">
+    <img src="https://raw.githubusercontent.com/eikarna/eikarna.github.io/refs/heads/master/_assets/images/about%402x.jpg" 
+         class="w-full h-full object-cover blur-sm" />
+    <div class="absolute inset-0 bg-black/60"></div>
+  </div>
+
   <!-- Hero Section -->
-  <section id="hero" class="flex justify-center bg-cover bg-center h-screen rounded-bl-3xl z-1 rounded-br-3xl"
-    style="background-image: url('https://raw.githubusercontent.com/eikarna/eikarna.github.io/refs/heads/master/_assets/images/about%402x.jpg');">
+  <section id="hero" class="justify-center bg-transparent h-screen rounded-bl-3xl rounded-br-3xl relative flex h-screen z-10">
     <div class="container mx-auto px-4 flex flex-col justify-center h-full text-white text-center">
       <h2 class="text-4xl font-bold mb-4 text-gray-900 dark:text-gray-200">Halo, Saya Adnan Alkautsar Syamsafa</h2>
       <p class="text-xl mb-8 text-white drop-shadow-lg">Seorang programmer handal, namun enggan mengoding.</p>
       <a href="#projects"
-        class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300 max-w-64 mx-auto">Lihat
+        class="bg-blue-600 hover:-translate-y-2,shadow-lg text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300 max-w-64 mx-auto">Lihat
         Proyek Saya</a>
     </div>
   </section>
 
   <!-- About Section -->
   <section id="about"
-    class="py-16 bg-white dark:bg-gray-800 rounded-bl-3xl rounded-br-3xl relative -z-10 -mt-4 fade-in-section">
+    class="py-16 bg-white dark:bg-gray-800 relative -z-10 -mt-4 fade-in-section">
     <div class="container mx-auto px-4 text-center">
       <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-8">Tentang Saya</h2>
       <p class="text-gray-600 dark:text-gray-200 max-w-2xl mx-auto">
@@ -98,75 +92,96 @@
 
   <!-- Projects Section -->
   <section id="projects"
-    class="py-16 bg-gray-100 dark:bg-gray-900 opacity-0 fade-in invisible transition-opacity duration-1000 ease-in-out">
+    class="py-16 bg-gray-100 dark:bg-gray-900">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold text-center text-gray-800 mb-8 dark:text-white">Proyek Saya</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- Project Card 1 -->
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0" style="--index: 0">
-          <img
-            src="https://opengraph.githubassets.com/235452e5bc7202daf0935b0a68ffe68281328fcc63892eebc3f94695e7ec3182/eikarna/gotops"
-            alt="Project 1" class="mb-4 rounded">
-          <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2">GotoPS (GO-lang TO support Private Server)
-          </h3>
-          <p class="text-gray-600 dark:text-gray-300">Sebuah kerangka kerja/framework untuk membuat sebuah server
-            pribadi untuk
-            Game bernama Growtopia. Proyek ini berbasis <a href="https://github.com/codecat/go-enet">codecat/go-enet</a>
-            yang telah ditambahkan banyak
-            fitur untuk mendukung berbagai kebutuhan yang menggunakan jaringan ENet.</p>
-        </div>
+        <a href="https://github.com/eikarna/gotops" class="group">
+          <div class="group-hover:bg-gray-700 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0"
+            style="--index: 0">
+            <img
+              src="https://opengraph.githubassets.com/235452e5bc7202daf0935b0a68ffe68281328fcc63892eebc3f94695e7ec3182/eikarna/gotops"
+              alt="Project 1" class="mb-4 rounded">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2">GotoPS (GO-lang TO support Private
+              Server)
+            </h3>
+            <p class="text-gray-600 dark:text-gray-300">Sebuah kerangka kerja/framework untuk membuat sebuah server
+              pribadi untuk
+              Game bernama Growtopia. Proyek ini berbasis codecat/go-enet
+              yang telah ditambahkan banyak
+              fitur untuk mendukung berbagai kebutuhan yang menggunakan jaringan ENet.</p>
+          </div>
+        </a>
         <!-- Project Card 2 -->
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0" style="--index: 0">
-          <img
-            src="https://opengraph.githubassets.com/586074c92084ba6d7fa86642736607b48b2df7b49597e27b633128b5d607f6a3/eikarna/gotps"
-            alt="Project 2" class="mb-4 rounded">
-          <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2">GotPS</h3>
-          <p class="text-gray-600 dark:text-gray-300">Sebuah proyek server pribadi untuk game bernama Growtopia,
-            menggunakan <a href="https://github.com/eikarna/gotops">GotoPS</a> yang membuat server ini siap untuk di
-            kembangkan lebih lanjut dan yang pastinya sudah Production-Ready (thanks to Go for type-safe).
-          </p>
-        </div>
+        <a href="https://github.com/eikarna/gotps" class="group">
+          <div class="group-hover:bg-gray-700 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0"
+            style="--index: 0">
+            <img
+              src="https://opengraph.githubassets.com/586074c92084ba6d7fa86642736607b48b2df7b49597e27b633128b5d607f6a3/eikarna/gotps"
+              alt="Project 2" class="mb-4 rounded">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2">GotPS</h3>
+            <p class="text-gray-600 dark:text-gray-300">Sebuah proyek server pribadi untuk game bernama Growtopia,
+              menggunakan GotoPS yang membuat server ini siap untuk di
+              kembangkan lebih lanjut dan yang pastinya sudah Production-Ready (thanks to Go for type-safe).
+            </p>
+          </div>
+        </a>
         <!-- Project Card 3 -->
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0" style="--index: 0">
-          <img
-            src="https://opengraph.githubassets.com/a1e8db62208b5398d7e4c7d286b14d0033fac8324766b11f2df74506c1e3f48e/eikarna/GoDat"
-            alt="Project 3" class="mb-4 rounded">
-          <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2">GoDat</h3>
-          <p class="text-gray-600 dark:text-gray-300">Sebuah proyek aplikasi berbasis CLI/terminal untuk
-            serialisasi/deserialisasi sebuah items.dat yang berisi data assets tentang suatu item. Proyek
-            ini hanya untuk game bernama Growtopia.</p>
-        </div>
+        <a href="https://github.com/eikarna/GoDat" class="group">
+          <div class="group-hover:bg-gray-700 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0"
+            style="--index: 0">
+            <img
+              src="https://opengraph.githubassets.com/a1e8db62208b5398d7e4c7d286b14d0033fac8324766b11f2df74506c1e3f48e/eikarna/GoDat"
+              alt="Project 3" class="mb-4 rounded">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2">GoDat</h3>
+            <p class="text-gray-600 dark:text-gray-300">Sebuah proyek aplikasi berbasis CLI/terminal untuk
+              serialisasi/deserialisasi sebuah items.dat yang berisi data assets tentang suatu item. Proyek
+              ini hanya untuk game bernama Growtopia.</p>
+          </div>
+        </a>
         <!-- Project Card 4 -->
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0" style="--index: 0">
-          <img
-            src="https://opengraph.githubassets.com/adaa30a4414df3fcb22f64258cc5db2ea9f691ca1a67d1f5f678bfa825bf2f12/eikarna/SmoothVideo"
-            alt="Project 4" class="mb-4 rounded">
-          <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2">Smooth Video</h3>
-          <p class="text-gray-600 dark:text-gray-300">Sebuah proyek aplikasi Android untuk memproses suatu video supaya
-            terlihat
-            lebih halus, dengan teknik Motion Interpolation dan Frame Blending menggunakan FFmpegKit sebagai
-            alat pemrosesannya.</p>
-        </div>
+        <a href="https://github.com/eikarna/SmoothVideo" class="group">
+          <div class="group-hover:bg-gray-700 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0"
+            style="--index: 0">
+            <img
+              src="https://opengraph.githubassets.com/adaa30a4414df3fcb22f64258cc5db2ea9f691ca1a67d1f5f678bfa825bf2f12/eikarna/SmoothVideo"
+              alt="Project 4" class="mb-4 rounded">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2">Smooth Video</h3>
+            <p class="text-gray-600 dark:text-gray-300">Sebuah proyek aplikasi Android untuk memproses suatu video
+              supaya
+              terlihat
+              lebih halus, dengan teknik Motion Interpolation dan Frame Blending menggunakan FFmpegKit sebagai
+              alat pemrosesannya.</p>
+          </div>
+        </a>
         <!-- Project Card 5 -->
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0" style="--index: 0">
-          <img
-            src="https://opengraph.githubassets.com/82253a9737737f74aae51c89254ac7c9d9fa860a4bf148d872fab4afde99a235/eikarna/proxy-checker-next"
-            alt="Project 5" class="mb-4 rounded">
-          <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2">Proxy Checker</h3>
-          <p class="text-gray-600 dark:text-gray-300">Sebuah proyek website yang berfungsi untuk cek proxy (HTTP, HTTPS,
-            SOCKS4/SOCKS5) menggunakan Axios dengan TailwindCSS sebagai stylesheeet nya. Proyek ini berbasis
-            Next.js dengan bahasa TypeScript yang membuat proyek ini Production-Ready (Thanks to
-            TypeScript).</p>
-        </div>
+        <a href="https://github.com/eikarna/proxy-checker-next" class="group">
+          <div class="group-hover:bg-gray-700 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0"
+            style="--index: 0">
+            <img
+              src="https://opengraph.githubassets.com/82253a9737737f74aae51c89254ac7c9d9fa860a4bf148d872fab4afde99a235/eikarna/proxy-checker-next"
+              alt="Project 5" class="mb-4 rounded">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2">Proxy Checker</h3>
+            <p class="text-gray-600 dark:text-gray-300">Sebuah proyek website yang berfungsi untuk cek proxy (HTTP,
+              HTTPS,
+              SOCKS4/SOCKS5) menggunakan Axios dengan TailwindCSS sebagai stylesheeet nya. Proyek ini berbasis
+              Next.js dengan bahasa TypeScript yang membuat proyek ini Production-Ready (Thanks to
+              TypeScript).</p>
+          </div>
+        </a>
         <!-- Project Card 6 -->
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0" style="--index: 0">
-          <img
-            src="https://opengraph.githubassets.com/0f0a169682210fada5487270ef112b273b35c45e3e11e66db1ad9164ba04df16/eikarna/BluetoothJammer"
-            alt="Project 6" class="mb-4 rounded">
-          <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2">Bluetooth Jammer</h3>
-          <p class="text-gray-600 dark:text-gray-300">Sebuah proyek aplikasi Android berbasis Kotlin untuk menyerang
-            perangkat bluetooth terdekat. Proyek ini sedang dalam pengerjaan/WIP.</p>
-        </div>
+        <a href="https://github.com/eikarna/BluetoothJammer" class="group">
+          <div class="group-hover:bg-gray-700 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0"
+            style="--index: 0">
+            <img
+              src="https://opengraph.githubassets.com/0f0a169682210fada5487270ef112b273b35c45e3e11e66db1ad9164ba04df16/eikarna/BluetoothJammer"
+              alt="Project 6" class="mb-4 rounded">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2">Bluetooth Jammer</h3>
+            <p class="text-gray-600 dark:text-gray-300">Sebuah proyek aplikasi Android berbasis Kotlin untuk menyerang
+              perangkat bluetooth terdekat. Proyek ini sedang dalam pengerjaan/WIP.</p>
+          </div>
+        </a>
       </div>
     </div>
     <div class="flex justify-center mt-8">
@@ -184,35 +199,6 @@
       <p class="dark:text-gray-900 bold">&copy; 2025 Adnan. All rights reserved.</p>
     </div>
   </footer>
-
-  <!-- Javascript -->
-  <script type="text/javascript">
-    function toggleMode() {
-      document.documentElement.classList.toggle('dark');
-      const isDark = document.documentElement.classList.contains('dark');
-      Cookies.set('darkMode', isDark ? 'enabled' : 'disabled');
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const darkMode = Cookies.get('darkMode');
-      if (darkMode === 'enabled') document.documentElement.classList.add('dark');
-
-      // Event listener untuk tombol toggle
-      document.getElementById('toggleMode').addEventListener('click', toggleMode);
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("opacity-100", "visible");
-            entry.target.classList.remove("opacity-0", "invisible");
-          }
-        });
-      });
-
-      // Target semua elemen dengan kelas 'fade-in'
-      document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
-    })
-  </script>
-
 </body>
 
 </html>
