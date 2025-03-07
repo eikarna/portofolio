@@ -1,53 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Adnan Alkautsar Syamsafa, Seorang pengembang web & perangkat lunak yang berfokus pada pembuatan situs web/aplikasi responsif dan fungsional.">
   <link rel="shortcut icon" type="image/x-icon" href="https://raw.githubusercontent.com/eikarna/eikarna/refs/heads/main/favicon.ico">
   <title>Portofolio - Adnan</title>
+  
+  <!-- Preconnect & Preload -->
+  <link rel="preconnect" href="https://cdn.tailwindcss.com">
+  <link rel="preconnect" href="https://opengraph.githubassets.com">
+  <link rel="preload" as="image" href="https://raw.githubusercontent.com/eikarna/eikarna.github.io/refs/heads/master/_assets/images/about%402x.jpg">
+  
   <!-- Gunakan CDN Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-</head>
-
-<body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-white transition-colors duration-300 ease-in-out">
-
+  
+  <!-- CSS Kustom: Animasi -->
   <style>
-    /* Tambahkan animasi custom */
     @keyframes slideUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
-
     @keyframes cardEntrance {
-      from {
-        opacity: 0;
-        transform: translateY(50px) scale(0.95);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
+      from { opacity: 0; transform: translateY(50px) scale(0.95); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
     }
-
-    .fade-in-section {
-      animation: slideUp 0.6s ease-out forwards;
-    }
-
-    .project-card {
-      animation: cardEntrance 0.6s ease-out forwards;
-      animation-delay: calc(var(--index) * 0.1s);
+    .fade-in-section { animation: slideUp 0.6s ease-out forwards; }
+    .project-card { 
+      animation: cardEntrance 0.6s ease-out forwards; 
+      animation-delay: calc(var(--index) * 0.1s); 
     }
   </style>
+</head>
+<body class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-white transition-colors duration-300 ease-in-out">
 
   <!-- Header Section -->
   <header class="bg-blue-600 text-white py-6">
@@ -62,135 +47,116 @@
     </div>
   </header>
 
+  <!-- Background Image -->
   <div class="fixed -z-10 inset-0 h-screen">
     <img src="https://raw.githubusercontent.com/eikarna/eikarna.github.io/refs/heads/master/_assets/images/about%402x.jpg" 
-         class="w-full h-full object-cover blur-sm" alt="background image" width="100%" height="100%" />
+         class="w-full h-full object-cover blur-sm" 
+         alt="background image" 
+         loading="lazy"
+         width="1920" height="1080" />
     <div class="absolute inset-0 bg-black/60"></div>
   </div>
 
   <!-- Hero Section -->
-  <section id="hero" class="justify-center bg-transparent h-screen rounded-bl-3xl rounded-br-3xl relative flex h-screen z-10">
+  <section id="hero" class="justify-center bg-transparent h-screen rounded-bl-3xl rounded-br-3xl relative flex z-10">
     <div class="container mx-auto px-4 flex flex-col justify-center h-full text-white text-center">
       <h2 class="text-4xl font-bold mb-4 text-gray-200">Halo, Saya Adnan Alkautsar Syamsafa</h2>
       <p class="text-xl mb-8 text-white drop-shadow-lg">Seorang programmer handal, namun enggan mengoding.</p>
-      <a href="#projects"
-        class="bg-blue-600 hover:-translate-y-2,shadow-lg text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300 max-w-64 mx-auto">Lihat
-        Proyek Saya</a>
+      <a href="#projects" class="bg-blue-600 hover:-translate-y-2 shadow-lg text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-300 max-w-64 mx-auto">
+        Lihat Proyek Saya
+      </a>
     </div>
   </section>
 
   <!-- About Section -->
-  <section id="about"
-    class="py-16 bg-white dark:bg-gray-800 relative -z-10 -mt-4 fade-in-section">
+  <section id="about" class="py-16 bg-white dark:bg-gray-800 relative -z-10 -mt-4 fade-in-section">
     <div class="container mx-auto px-4 text-center">
       <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-8">Tentang Saya</h2>
       <p class="text-gray-600 dark:text-gray-200 max-w-2xl mx-auto">
-        Saya adalah seorang pengembang web & perangkat lunak yang berfokus pada pembuatan situs web/aplikasi
-        responsif dan fungsional. Dengan memiliki pengalaman pengembangan sebuah website atau aplikasi lebih
-        dari 3 tahun, saya berkomitmen untuk memberikan solusi desain yang inovatif dan efisien.
+        Saya adalah seorang pengembang web & perangkat lunak yang berfokus pada pembuatan situs web/aplikasi responsif dan fungsional. 
+        Dengan pengalaman lebih dari 3 tahun, saya berkomitmen memberikan solusi desain yang inovatif dan efisien.
       </p>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects"
-    class="py-16 bg-gray-100 dark:bg-gray-900">
+  <section id="projects" class="py-16 bg-gray-100 dark:bg-gray-900">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold text-center text-gray-800 mb-8 dark:text-white">Proyek Saya</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- Project Card 1 -->
         <a href="https://github.com/eikarna/gotops" class="group transform transition-all duration-300 hover:scale-105">
-          <div class="group-hover:bg-gray-700 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0"
-            style="--index: 0">
-            <img
-              src="https://opengraph.githubassets.com/235452e5bc7202daf0935b0a68ffe68281328fcc63892eebc3f94695e7ec3182/eikarna/gotops"
-              alt="Project 1" class="mb-4 rounded">
-            <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2 group-hover:text-gray-200">GotoPS (GO-lang TO support Private
-              Server)
+          <div class="group-hover:bg-gray-700 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0" style="--index: 0">
+            <img src="https://opengraph.githubassets.com/235452e5bc7202daf0935b0a68ffe68281328fcc63892eebc3f94695e7ec3182/eikarna/gotops" 
+                 alt="Project 1" class="mb-4 rounded" loading="lazy">
+            <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2 group-hover:text-gray-200">
+              GotoPS (GO-lang TO support Private Server)
             </h3>
-            <p class="text-gray-600 dark:text-gray-300 group-hover:text-gray-300">Sebuah kerangka kerja/framework untuk membuat sebuah server
-              pribadi untuk
-              Game bernama Growtopia. Proyek ini berbasis codecat/go-enet
-              yang telah ditambahkan banyak
-              fitur untuk mendukung berbagai kebutuhan yang menggunakan jaringan ENet.</p>
+            <p class="text-gray-600 dark:text-gray-300 group-hover:text-gray-300">
+              Kerangka kerja untuk membuat server pribadi untuk game Growtopia. Dibangun atas dasar codecat/go-enet dengan tambahan fitur jaringan ENet.
+            </p>
           </div>
         </a>
         <!-- Project Card 2 -->
         <a href="https://github.com/eikarna/gotps" class="group transform transition-all duration-300 hover:scale-105">
-          <div class="group-hover:bg-gray-700 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0"
-            style="--index: 0">
-            <img
-              src="https://opengraph.githubassets.com/586074c92084ba6d7fa86642736607b48b2df7b49597e27b633128b5d607f6a3/eikarna/gotps"
-              alt="Project 2" class="mb-4 rounded">
+          <div class="group-hover:bg-gray-700 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0" style="--index: 1">
+            <img src="https://opengraph.githubassets.com/586074c92084ba6d7fa86642736607b48b2df7b49597e27b633128b5d607f6a3/eikarna/gotps" 
+                 alt="Project 2" class="mb-4 rounded" loading="lazy">
             <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2 group-hover:text-gray-200">GotPS</h3>
-            <p class="text-gray-600 dark:text-gray-300 group-hover:text-gray-300">Sebuah proyek server pribadi untuk game bernama Growtopia,
-              menggunakan GotoPS yang membuat server ini siap untuk di
-              kembangkan lebih lanjut dan yang pastinya sudah Production-Ready (thanks to Go for type-safe).
+            <p class="text-gray-600 dark:text-gray-300 group-hover:text-gray-300">
+              Server pribadi untuk Growtopia, dikembangkan dengan GotoPS dan siap untuk dikembangkan lebih lanjut, dengan basis Production-Ready.
             </p>
           </div>
         </a>
         <!-- Project Card 3 -->
         <a href="https://github.com/eikarna/GoDat" class="group transform transition-all duration-300 hover:scale-105">
-          <div class="group-hover:bg-gray-700 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0"
-            style="--index: 0">
-            <img
-              src="https://opengraph.githubassets.com/a1e8db62208b5398d7e4c7d286b14d0033fac8324766b11f2df74506c1e3f48e/eikarna/GoDat"
-              alt="Project 3" class="mb-4 rounded">
+          <div class="group-hover:bg-gray-700 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0" style="--index: 2">
+            <img src="https://opengraph.githubassets.com/a1e8db62208b5398d7e4c7d286b14d0033fac8324766b11f2df74506c1e3f48e/eikarna/GoDat" 
+                 alt="Project 3" class="mb-4 rounded" loading="lazy">
             <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2 group-hover:text-gray-200">GoDat</h3>
-            <p class="text-gray-600 dark:text-gray-300 group-hover:text-gray-300">Sebuah proyek aplikasi berbasis CLI/terminal untuk
-              serialisasi/deserialisasi sebuah items.dat yang berisi data assets tentang suatu item. Proyek
-              ini hanya untuk game bernama Growtopia.</p>
+            <p class="text-gray-600 dark:text-gray-300 group-hover:text-gray-300">
+              Aplikasi berbasis CLI/terminal untuk serialisasi/deserialisasi items.dat yang berisi data assets tentang suatu item di Growtopia.
+            </p>
           </div>
         </a>
         <!-- Project Card 4 -->
         <a href="https://github.com/eikarna/SmoothVideo" class="group transform transition-all duration-300 hover:scale-105">
-          <div class="group-hover:bg-gray-700 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0"
-            style="--index: 0">
-            <img
-              src="https://opengraph.githubassets.com/adaa30a4414df3fcb22f64258cc5db2ea9f691ca1a67d1f5f678bfa825bf2f12/eikarna/SmoothVideo"
-              alt="Project 4" class="mb-4 rounded">
+          <div class="group-hover:bg-gray-700 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0" style="--index: 3">
+            <img src="https://opengraph.githubassets.com/adaa30a4414df3fcb22f64258cc5db2ea9f691ca1a67d1f5f678bfa825bf2f12/eikarna/SmoothVideo" 
+                 alt="Project 4" class="mb-4 rounded" loading="lazy">
             <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2 group-hover:text-gray-200">Smooth Video</h3>
-            <p class="text-gray-600 dark:text-gray-300 group-hover:text-gray-300">Sebuah proyek aplikasi Android untuk memproses suatu video
-              supaya
-              terlihat
-              lebih halus, dengan teknik Motion Interpolation dan Frame Blending menggunakan FFmpegKit sebagai
-              alat pemrosesannya.</p>
+            <p class="text-gray-600 dark:text-gray-300 group-hover:text-gray-300">
+              Aplikasi Android yang memproses video agar tampak lebih halus dengan teknik Motion Interpolation dan Frame Blending menggunakan FFmpegKit.
+            </p>
           </div>
         </a>
         <!-- Project Card 5 -->
         <a href="https://github.com/eikarna/proxy-checker-next" class="group transform transition-all duration-300 hover:scale-105">
-          <div class="group-hover:bg-gray-700 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0"
-            style="--index: 0">
-            <img
-              src="https://opengraph.githubassets.com/82253a9737737f74aae51c89254ac7c9d9fa860a4bf148d872fab4afde99a235/eikarna/proxy-checker-next"
-              alt="Project 5" class="mb-4 rounded">
+          <div class="group-hover:bg-gray-700 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0" style="--index: 4">
+            <img src="https://opengraph.githubassets.com/82253a9737737f74aae51c89254ac7c9d9fa860a4bf148d872fab4afde99a235/eikarna/proxy-checker-next" 
+                 alt="Project 5" class="mb-4 rounded" loading="lazy">
             <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2 group-hover:text-gray-200">Proxy Checker</h3>
-            <p class="text-gray-600 dark:text-gray-300 group-hover:text-gray-300">Sebuah proyek website yang berfungsi untuk cek proxy (HTTP,
-              HTTPS,
-              SOCKS4/SOCKS5) menggunakan Axios dengan TailwindCSS sebagai stylesheeet nya. Proyek ini berbasis
-              Next.js dengan bahasa TypeScript yang membuat proyek ini Production-Ready (Thanks to
-              TypeScript).</p>
+            <p class="text-gray-600 dark:text-gray-300 group-hover:text-gray-300">
+              Website untuk cek proxy (HTTP, HTTPS, SOCKS4/SOCKS5) berbasis Next.js dan TypeScript, menggunakan Axios dan TailwindCSS.
+            </p>
           </div>
         </a>
         <!-- Project Card 6 -->
         <a href="https://github.com/eikarna/BluetoothJammer" class="group transform transition-all duration-300 hover:scale-105">
-          <div class="group-hover:bg-gray-700 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0"
-            style="--index: 0">
-            <img
-              src="https://opengraph.githubassets.com/0f0a169682210fada5487270ef112b273b35c45e3e11e66db1ad9164ba04df16/eikarna/BluetoothJammer"
-              alt="Project 6" class="mb-4 rounded">
+          <div class="group-hover:bg-gray-700 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0" style="--index: 5">
+            <img src="https://opengraph.githubassets.com/0f0a169682210fada5487270ef112b273b35c45e3e11e66db1ad9164ba04df16/eikarna/BluetoothJammer" 
+                 alt="Project 6" class="mb-4 rounded" loading="lazy">
             <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2 group-hover:text-gray-200">Bluetooth Jammer</h3>
-            <p class="text-gray-600 dark:text-gray-300 group-hover:text-gray-300">Sebuah proyek aplikasi Android berbasis Kotlin untuk menyerang
-              perangkat bluetooth terdekat. Proyek ini sedang dalam pengerjaan/WIP.</p>
+            <p class="text-gray-600 dark:text-gray-300 group-hover:text-gray-300">
+              Aplikasi Android berbasis Kotlin untuk menyerang perangkat Bluetooth terdekat. (WIP)
+            </p>
           </div>
         </a>
       </div>
     </div>
     <div class="flex justify-center mt-8">
-      <p class="text-gray-600 dark:text-gray-100 text-center">Penasaran? <a
-          href="https://github.com/eikarna?tab=repositories" class="hover:underline decoration-solid">Lihat
-          lebih
-          banyak!</a>
+      <p class="text-gray-600 dark:text-gray-100 text-center">
+        Penasaran? <a href="https://github.com/eikarna?tab=repositories" class="hover:underline">Lihat lebih banyak!</a>
       </p>
     </div>
   </section>
@@ -198,9 +164,9 @@
   <!-- Footer -->
   <footer class="bg-gray-800 dark:bg-gray-300 text-white py-6 relative z-30 -mt-4">
     <div class="container mx-auto px-4 text-center">
-      <p class="dark:text-gray-900 bold">&copy; 2025 Adnan. All rights reserved.</p>
+      <p class="dark:text-gray-900 font-bold">&copy; 2025 Adnan. All rights reserved.</p>
     </div>
   </footer>
+  
 </body>
-
 </html>
