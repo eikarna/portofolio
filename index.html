@@ -14,6 +14,9 @@
   
   <!-- Gunakan CDN Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Gunakan CDN Animate On Scroll --->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   
   <!-- CSS Kustom: Animasi -->
   <style>
@@ -58,7 +61,7 @@
   </div>
 
   <!-- Hero Section -->
-  <section id="hero" class="justify-center bg-transparent h-screen rounded-bl-3xl rounded-br-3xl relative flex z-10">
+  <section id="hero" class="justify-center bg-transparent h-screen rounded-bl-3xl rounded-br-3xl relative flex z-10" data-aos="flip-right">
     <div class="container mx-auto px-4 flex flex-col justify-center h-full text-white text-center">
       <h2 class="text-4xl font-bold mb-4 text-gray-200">Halo, Saya Adnan Alkautsar Syamsafa</h2>
       <p class="text-xl mb-8 text-white drop-shadow-lg">Seorang programmer handal, namun enggan mengoding.</p>
@@ -69,7 +72,7 @@
   </section>
 
   <!-- About Section -->
-  <section id="about" class="py-16 bg-white dark:bg-gray-800 relative -z-10 -mt-4 fade-in-section">
+  <section id="about" class="py-16 bg-white dark:bg-gray-800 relative -z-10 -mt-4 fade-in-section" data-aos="fade-up" data-aos-anchor-placement="center-center">
     <div class="container mx-auto px-4 text-center">
       <h2 class="text-3xl font-bold text-gray-800 dark:text-white mb-8">Tentang Saya</h2>
       <p class="text-gray-600 dark:text-gray-200 max-w-2xl mx-auto">
@@ -86,7 +89,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- Project Card 1 -->
         <a href="https://github.com/eikarna/gotops" class="group transform transition-all duration-300 hover:scale-105">
-          <div class="group-hover:bg-gray-700 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0" style="--index: 0">
+          <div class="group-hover:bg-gray-700 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0" data-aos="fade-up" data-aos-anchor-placement="center-center" style="--index: 0">
             <img src="https://opengraph.githubassets.com/235452e5bc7202daf0935b0a68ffe68281328fcc63892eebc3f94695e7ec3182/eikarna/gotops" 
                  alt="Project 1" class="mb-4 rounded" loading="lazy">
             <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2 group-hover:text-gray-200">
@@ -99,7 +102,7 @@
         </a>
         <!-- Project Card 2 -->
         <a href="https://github.com/eikarna/gotps" class="group transform transition-all duration-300 hover:scale-105">
-          <div class="group-hover:bg-gray-700 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0" style="--index: 1">
+          <div class="group-hover:bg-gray-700 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0" data-aos="fade-up" data-aos-anchor-placement="center-center" style="--index: 1">
             <img src="https://opengraph.githubassets.com/586074c92084ba6d7fa86642736607b48b2df7b49597e27b633128b5d607f6a3/eikarna/gotps" 
                  alt="Project 2" class="mb-4 rounded" loading="lazy">
             <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2 group-hover:text-gray-200">GotPS</h3>
@@ -110,7 +113,7 @@
         </a>
         <!-- Project Card 3 -->
         <a href="https://github.com/eikarna/GoDat" class="group transform transition-all duration-300 hover:scale-105">
-          <div class="group-hover:bg-gray-700 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0" style="--index: 2">
+          <div class="group-hover:bg-gray-700 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0" data-aos="fade-up" data-aos-anchor-placement="center-center" style="--index: 2">
             <img src="https://opengraph.githubassets.com/a1e8db62208b5398d7e4c7d286b14d0033fac8324766b11f2df74506c1e3f48e/eikarna/GoDat" 
                  alt="Project 3" class="mb-4 rounded" loading="lazy">
             <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2 group-hover:text-gray-200">GoDat</h3>
@@ -121,7 +124,7 @@
         </a>
         <!-- Project Card 4 -->
         <a href="https://github.com/eikarna/SmoothVideo" class="group transform transition-all duration-300 hover:scale-105">
-          <div class="group-hover:bg-gray-700 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0" style="--index: 3">
+          <div class="group-hover:bg-gray-700 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0" data-aos="fade-up" data-aos-anchor-placement="center-center" style="--index: 3">
             <img src="https://opengraph.githubassets.com/adaa30a4414df3fcb22f64258cc5db2ea9f691ca1a67d1f5f678bfa825bf2f12/eikarna/SmoothVideo" 
                  alt="Project 4" class="mb-4 rounded" loading="lazy">
             <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2 group-hover:text-gray-200">Smooth Video</h3>
@@ -132,7 +135,7 @@
         </a>
         <!-- Project Card 5 -->
         <a href="https://github.com/eikarna/proxy-checker-next" class="group transform transition-all duration-300 hover:scale-105">
-          <div class="group-hover:bg-gray-700 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0" style="--index: 4">
+          <div class="group-hover:bg-gray-700 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0" data-aos="fade-up" data-aos-anchor-placement="center-center" style="--index: 4">
             <img src="https://opengraph.githubassets.com/82253a9737737f74aae51c89254ac7c9d9fa860a4bf148d872fab4afde99a235/eikarna/proxy-checker-next" 
                  alt="Project 5" class="mb-4 rounded" loading="lazy">
             <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2 group-hover:text-gray-200">Proxy Checker</h3>
@@ -143,7 +146,7 @@
         </a>
         <!-- Project Card 6 -->
         <a href="https://github.com/eikarna/BluetoothJammer" class="group transform transition-all duration-300 hover:scale-105">
-          <div class="group-hover:bg-gray-700 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0" style="--index: 5">
+          <div class="group-hover:bg-gray-700 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md project-card opacity-0" data-aos="fade-up" data-aos-anchor-placement="center-center" style="--index: 5">
             <img src="https://opengraph.githubassets.com/0f0a169682210fada5487270ef112b273b35c45e3e11e66db1ad9164ba04df16/eikarna/BluetoothJammer" 
                  alt="Project 6" class="mb-4 rounded" loading="lazy">
             <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-2 group-hover:text-gray-200">Bluetooth Jammer</h3>
